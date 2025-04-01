@@ -1,0 +1,223 @@
+:root {
+  --lightred: hsl(0, 100%, 67%);
+  --orangeyyellow: hsl(39, 100%, 56%);
+  --greenteal: hsl(166, 100%, 37%);
+  --Cobaltblue: hsl(234, 85%, 45%);
+
+  /* ## Gradients */
+  --lightslateblue: hsl(252, 100%, 67%);
+  --lightroyalblue: hsl(241, 81%, 54%);
+  --violetblue: hsla(256, 72%, 46%, 1);
+  --persianblue: hsla(241, 72%, 46%, 0);
+
+  /* ### Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --paleblue: hsl(221, 100%, 96%);
+  --lightlavender: hsl(241, 100%, 89%);
+  --darkgrayblue: hsl(224, 30%, 27%);
+
+  --sans-serif: "Hanken Grotesk", sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: var(--sans-serif);
+  font-size: 18px;
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px var(--lightlavender);
+  width: 100%;
+  max-width: 375px;
+  background: var(--white);
+}
+.result {
+  background: linear-gradient(
+    180deg,
+    var(--lightslateblue),
+    var(--lightroyalblue)
+  );
+  text-align: center;
+  padding: 40px;
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 0 0 2rem 2rem;
+}
+.result h1 {
+  color: var(--lightlavender);
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.circle {
+  margin: 1rem auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--violetblue), var(--persianblue));
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.circle .res {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.res {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.total {
+  opacity: 0.4;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.result h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.result p:last-child {
+  margin: 0.5rem 3rem 0 3rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+.summary {
+  padding: 2rem;
+  /* display: flex;
+  flex-flow: column;
+  align-items: stretch; */
+}
+.summary h3 {
+  padding-bottom: 1rem;
+  text-align: start;
+  color: var(--darkgrayblue);
+  font-size: 1.5rem;
+}
+.summary ul {
+  margin-bottom: 2rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  row-gap: 0.6rem;
+}
+.summary ul .block {
+  list-style-type: none;
+  padding: 1rem;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr;
+  align-items: center;
+}
+.summary .block img {
+  align-items: center;
+}
+.summary .block .label {
+  text-align: start;
+}
+.summary .block .res {
+  padding-right: 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: right;
+  color: var(--darkgrayblue);
+}
+.summary .block .total {
+  color: var(--darkgrayblue);
+  font-size: 1rem;
+  text-align: right;
+  opacity: 0.6;
+}
+.red {
+  color: var(--lightred);
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.orange {
+  color: var(--orangeyyellow);
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+.teal {
+  color: var(--greenteal);
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.blue {
+  color: var(--Cobaltblue);
+  background-color: hsla(234, 85%, 45%, 0.1);
+  margin-bottom: 1rem;
+}
+.button {
+  color: var(--white);
+  background: var(--darkgrayblue);
+  margin: 0;
+  padding: 1rem 7.5rem;
+  width: 100%;
+  align-items: stretch;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.button:hover {
+  background: linear-gradient(
+    180deg,
+    var(--lightslateblue),
+    var(--lightroyalblue)
+  );
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 650px) {
+  body {
+    margin: 100px auto;
+  }
+  .container {
+    max-width: 700px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .result {
+    grid-column: 1 / 2;
+    border-radius: 2rem;
+  }
+  .summary {
+    grid-column: 2 / 3;
+    padding: 1.5rem;
+  }
+  .summary ul .block {
+    padding: 0.8rem 1rem;
+  }
+  .button {
+    padding: 0.8rem 7.5rem;
+  }
+}
